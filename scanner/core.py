@@ -12,7 +12,8 @@ class AsyncPortScanner:
 
     async def _probe_active_service(self, reader, writer, port: int) -> str:
         try:
-            if port in:
+            # FIXED: Added the specific web ports to check against
+            if port in [80, 443, 8080]:
                 writer.write(b"HEAD / HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n")
                 await writer.drain()
             banner_bytes = await asyncio.wait_for(reader.read(512), timeout=1.0)
