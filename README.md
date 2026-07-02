@@ -4,7 +4,7 @@ async-net-probe: A high-performance async TCP port scanner &amp; banner grabber 
 
 ### Installation Guide
 1. Open Crostini terminal
-2. Clone tool: `git clone https://github.com`
+2. Clone tool: `git clone https://github.com/sweetcookiecake/async-net-probe/`
 3. Enter folder: `cd async-net-probe`
 
 ### Usage
